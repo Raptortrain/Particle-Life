@@ -40,7 +40,7 @@ int main(int argc, char *argv[]) {
   system("pause");
 
   //Create the universe of particles
-  Universe universe(9, 2000, window_w, window_h);
+  Universe universe(9, 2, window_w, window_h);
   universe.ReSeed(-0.02f, 0.06f, 0.0f, 20.0f, 20.0f, 70.0f, 0.05f, false);
 
   //Camera settings
