@@ -40,12 +40,12 @@ int main(int argc, char *argv[]) {
   system("pause");
 
   //Create the universe of particles
-  Universe universe(9, 400, window_w, window_h);
+  Universe universe(9, 1000, window_w, window_h);
   universe.ReSeed(-0.02f, 0.06f, 0.0f, 20.0f, 20.0f, 70.0f, 0.05f, false);
 
   //Camera settings
-  float cam_x = float(window_w/2);
-  float cam_y = float(window_h/2);
+  float cam_x = float(window_w);
+  float cam_y = float(window_h);
   float cam_zoom = 1.0f;
   float cam_x_dest = cam_x;
   float cam_y_dest = cam_y;
@@ -87,7 +87,7 @@ int main(int argc, char *argv[]) {
           universe.SetPopulation(9, 400);
           universe.ReSeed(-0.02f, 0.06f, 0.0f, 20.0f, 20.0f, 70.0f, 0.05f, false);
         } else if (keycode == sf::Keyboard::C) { //Chaos
-          universe.SetPopulation(6, 400);
+          universe.SetPopulation(6, 1000);
           universe.ReSeed(0.02f, 0.04f, 0.0f, 30.0f, 30.0f, 100.0f, 0.01f, false);
         } else if (keycode == sf::Keyboard::D) { //Diversity
           universe.SetPopulation(12, 400);
