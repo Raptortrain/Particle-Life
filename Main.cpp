@@ -2,8 +2,8 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
-static const int window_w = 1600;
-static const int window_h = 900;
+static const int window_w = 2600;
+static const int window_h = 1500;
 static const int steps_per_frame_normal = 10;
 
 int main(int argc, char *argv[]) {
@@ -40,7 +40,7 @@ int main(int argc, char *argv[]) {
   system("pause");
 
   //Create the universe of particles
-  Universe universe(9, 1000, window_w, window_h);
+  Universe universe(9, 2000, window_w, window_h);
   universe.ReSeed(-0.02f, 0.06f, 0.0f, 20.0f, 20.0f, 70.0f, 0.05f, false);
 
   //Camera settings
@@ -84,34 +84,34 @@ int main(int argc, char *argv[]) {
           window.close();
           break;
         } else if (keycode == sf::Keyboard::B) { //Balanced
-          universe.SetPopulation(9, 400);
+          universe.SetPopulation(9, 2000);
           universe.ReSeed(-0.02f, 0.06f, 0.0f, 20.0f, 20.0f, 70.0f, 0.05f, false);
         } else if (keycode == sf::Keyboard::C) { //Chaos
-          universe.SetPopulation(6, 1000);
+          universe.SetPopulation(6, 2000);
           universe.ReSeed(0.02f, 0.04f, 0.0f, 30.0f, 30.0f, 100.0f, 0.01f, false);
         } else if (keycode == sf::Keyboard::D) { //Diversity
-          universe.SetPopulation(12, 400);
+          universe.SetPopulation(12, 2000);
           universe.ReSeed(-0.01f, 0.04f, 0.0f, 20.0f, 10.0f, 60.0f, 0.05f, true);
         } else if (keycode == sf::Keyboard::F) { //Frictionless
-          universe.SetPopulation(6, 300);
+          universe.SetPopulation(6, 2000);
           universe.ReSeed(0.01f, 0.005f, 10.0f, 10.0f, 10.0f, 60.0f, 0.0f, true);
         } else if (keycode == sf::Keyboard::G) { //Gliders
-          universe.SetPopulation(6, 400);
+          universe.SetPopulation(6, 2000);
           universe.ReSeed(0.0f, 0.06f, 0.0f, 20.0f, 10.0f, 50.0f, 0.1f, true);
         } else if (keycode == sf::Keyboard::H) { //Homogeneity
-          universe.SetPopulation(4, 400);
+          universe.SetPopulation(4, 2000);
           universe.ReSeed(0.0f, 0.04f, 10.0f, 10.0f, 10.0f, 80.0f, 0.05f, true);
         } else if (keycode == sf::Keyboard::L) { //Large Clusters
-          universe.SetPopulation(6, 400);
+          universe.SetPopulation(6, 2000);
           universe.ReSeed(0.025f, 0.02f, 0.0f, 30.0f, 30.0f, 100.0f, 0.2f, false);
         } else if (keycode == sf::Keyboard::M) { //Medium Clusters
-          universe.SetPopulation(6, 400);
+          universe.SetPopulation(6, 2000);
           universe.ReSeed(0.02f, 0.05f, 0.0f, 20.0f, 20.0f, 50.0f, 0.05f, false);
         } else if (keycode == sf::Keyboard::Q) { //Quiescence
-          universe.SetPopulation(6, 300);
+          universe.SetPopulation(6, 2000);
           universe.ReSeed(-0.02f, 0.1f, 10.0f, 20.0f, 20.0f, 60.0f, 0.2f, false);
         } else if (keycode == sf::Keyboard::S) { //Small Clusters
-          universe.SetPopulation(6, 600);
+          universe.SetPopulation(6, 2000);
           universe.ReSeed(-0.005f, 0.01f, 10.0f, 10.0f, 20.0f, 50.0f, 0.01f, false);
         } else if (keycode == sf::Keyboard::W) {
           universe.ToggleWrap();
